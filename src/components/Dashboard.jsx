@@ -126,6 +126,19 @@ export default function Dashboard({ user, onLogout }) {
           {activeTab === 'ai' && <AiChat budgets={budgets} />}
         </div>
       </main>
+
+      <nav className="db-mobile-nav">
+        {tabs.map((tab) => (
+          <button
+            key={tab.id}
+            className={`db-mobile-nav-item ${activeTab === tab.id ? 'active' : ''}`}
+            onClick={() => setActiveTab(tab.id)}
+          >
+            <span className="db-mobile-nav-icon">{tab.icon}</span>
+            <span className="db-mobile-nav-label">{tab.label}</span>
+          </button>
+        ))}
+      </nav>
     </div>
   );
 }
