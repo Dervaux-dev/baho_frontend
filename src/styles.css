@@ -3137,6 +3137,11 @@ label {
   padding: 24px 32px;
 }
 
+/* ---- MOBILE NAV (hidden by default, shown on small screens) ---- */
+.db-mobile-nav {
+  display: none;
+}
+
 /* ============================================
    DASHBOARD STAT CARDS
    ============================================ */
@@ -4087,7 +4092,7 @@ label {
   }
 
   .db-mobile-nav {
-    display: none;
+    display: flex;
   }
 }
 
